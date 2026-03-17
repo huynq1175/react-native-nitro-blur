@@ -1,0 +1,17 @@
+{
+  "cxxNamespace": ["nitroblur"],
+  "ios": {
+    "iosModuleName": "NitroBlur"
+  },
+  "android": {
+    "androidNamespace": ["nitroblur"],
+    "androidCxxLibName": "nitroblur"
+  },
+  "autolinking": {
+    "NitroBlur": {
+      "swift": "HybridNitroBlur",
+      "kotlin": "HybridNitroBlur"
+    }
+  },
+  "ignorePaths": ["node_modules"]
+}
