@@ -3,6 +3,8 @@
   "version": "0.1.2",
   "description": "Blur view",
   "main": "./lib/module/index.js",
+  "react-native": "./src/index.tsx",
+  "source": "./src/index.tsx",
   "types": "./lib/typescript/src/index.d.ts",
   "exports": {
     ".": {
