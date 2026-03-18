@@ -1,6 +1,6 @@
 {
   "name": "@abeman/react-native-nitro-blur",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Blur view",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
