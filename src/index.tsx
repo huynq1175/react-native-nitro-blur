@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import {
   findNodeHandle,
@@ -20,8 +18,8 @@ import type {
   NitroBlurTargetProps,
 } from './NitroBlurTarget.nitro';
 
-const NitroBlurConfig = require('../nitrogen/generated/shared/json/NitroBlurConfig.json');
-const NitroBlurTargetConfig = require('../nitrogen/generated/shared/json/NitroBlurTargetConfig.json');
+import NitroBlurConfig from '../nitrogen/generated/shared/json/NitroBlurConfig.json';
+import NitroBlurTargetConfig from '../nitrogen/generated/shared/json/NitroBlurTargetConfig.json';
 
 const NativeBlurView = getHostComponent<NitroBlurProps, NitroBlurMethods>(
   'NitroBlur',

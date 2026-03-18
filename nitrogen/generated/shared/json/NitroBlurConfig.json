@@ -1,0 +1,14 @@
+{
+  "uiViewClassName": "NitroBlur",
+  "supportsRawText": false,
+  "bubblingEventTypes": {},
+  "directEventTypes": {},
+  "validAttributes": {
+    "tint": true,
+    "intensity": true,
+    "blurReductionFactor": true,
+    "blurTargetId": true,
+    "blurMethod": true,
+    "hybridRef": true
+  }
+}
