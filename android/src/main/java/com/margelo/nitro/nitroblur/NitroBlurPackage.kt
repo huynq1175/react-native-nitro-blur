@@ -18,7 +18,9 @@ class NitroBlurPackage : BaseReactPackage() {
     }
 
     override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
-        return listOf(HybridNitroBlurManager())
+        // Use custom NitroBlurTargetViewGroupManager instead of generated HybridNitroBlurTargetManager
+        // because BlurTargetView needs ViewGroupManager (supports children), not SimpleViewManager
+        return listOf(HybridNitroBlurManager(), NitroBlurTargetViewGroupManager())
     }
 
     companion object {

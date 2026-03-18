@@ -9,8 +9,24 @@
   },
   "autolinking": {
     "NitroBlur": {
-      "swift": "HybridNitroBlur",
-      "kotlin": "HybridNitroBlur"
+      "ios": {
+        "language": "swift",
+        "implementationClassName": "HybridNitroBlur"
+      },
+      "android": {
+        "language": "kotlin",
+        "implementationClassName": "HybridNitroBlur"
+      }
+    },
+    "NitroBlurTarget": {
+      "ios": {
+        "language": "swift",
+        "implementationClassName": "HybridNitroBlurTarget"
+      },
+      "android": {
+        "language": "kotlin",
+        "implementationClassName": "HybridNitroBlurTarget"
+      }
     }
   },
   "ignorePaths": ["node_modules"]
