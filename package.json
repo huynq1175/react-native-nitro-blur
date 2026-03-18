@@ -1,5 +1,5 @@
 {
-  "name": "react-native-nitro-blur",
+  "name": "@abeman/react-native-nitro-blur",
   "version": "0.1.0",
   "description": "Blur view",
   "main": "./lib/module/index.js",

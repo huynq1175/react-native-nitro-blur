@@ -1,4 +1,4 @@
-import { BlurTargetView, BlurView } from 'react-native-nitro-blur';
+import { BlurTargetView, BlurView } from '@abeman/react-native-nitro-blur';
 import { useRef } from 'react';
 import {
   Dimensions,

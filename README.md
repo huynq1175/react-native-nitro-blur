@@ -1,4 +1,4 @@
-# react-native-nitro-blur
+# @abeman/react-native-nitro-blur
 
 A high-performance blur view component for React Native, built with [Nitro Modules](https://nitro.margelo.com/) (JSI). Drop-in alternative to `expo-blur` without any Expo dependency.
 
@@ -14,7 +14,7 @@ A high-performance blur view component for React Native, built with [Nitro Modul
 ## Installation
 
 ```sh
-npm install react-native-nitro-blur react-native-nitro-modules
+npm install @abeman/react-native-nitro-blur react-native-nitro-modules
 ```
 
 > `react-native-nitro-modules` is a required peer dependency — this library is built on [Nitro Modules](https://nitro.margelo.com/).
@@ -26,7 +26,7 @@ For iOS, run `pod install` in the `ios/` directory after installing.
 ### Basic (iOS + Android tint overlay)
 
 ```tsx
-import { BlurView } from 'react-native-nitro-blur';
+import { BlurView } from '@abeman/react-native-nitro-blur';
 
 function MyComponent() {
   return (
@@ -49,7 +49,7 @@ To enable real blur on Android, wrap the content you want to blur with `BlurTarg
 ```tsx
 import { useRef } from 'react';
 import { View, StyleSheet, Image } from 'react-native';
-import { BlurView, BlurTargetView } from 'react-native-nitro-blur';
+import { BlurView, BlurTargetView } from '@abeman/react-native-nitro-blur';
 
 function MyComponent() {
   const blurTargetRef = useRef(null);
@@ -109,7 +109,7 @@ Accepts all standard `View` props. On Android, this is a native container view t
 
 ```tsx
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
-import { BlurView } from 'react-native-nitro-blur';
+import { BlurView } from '@abeman/react-native-nitro-blur';
 
 const AnimatedBlurView = Animated.createAnimatedComponent(BlurView);
 
@@ -141,7 +141,7 @@ import Animated, {
   runOnJS,
   withTiming,
 } from 'react-native-reanimated';
-import { BlurView } from 'react-native-nitro-blur';
+import { BlurView } from '@abeman/react-native-nitro-blur';
 
 function MyComponent() {
   const progress = useSharedValue(0);
@@ -176,10 +176,10 @@ The `blurReductionFactor` prop helps match the perceived blur intensity between 
 
 ## Migrating from expo-blur
 
-| expo-blur | react-native-nitro-blur |
+| expo-blur | @abeman/react-native-nitro-blur |
 |-----------|------------------------|
-| `import { BlurView } from 'expo-blur'` | `import { BlurView } from 'react-native-nitro-blur'` |
-| `import { BlurTargetView } from 'expo-blur'` | `import { BlurTargetView } from 'react-native-nitro-blur'` |
+| `import { BlurView } from 'expo-blur'` | `import { BlurView } from '@abeman/react-native-nitro-blur'` |
+| `import { BlurTargetView } from 'expo-blur'` | `import { BlurTargetView } from '@abeman/react-native-nitro-blur'` |
 | `experimentalBlurMethod` | `blurMethod` (deprecated alias supported) |
 | `Animated.createAnimatedComponent(BlurView)` + `animatedProps` | Use `useAnimatedReaction` + `runOnJS` for prop animations (see above) |
 

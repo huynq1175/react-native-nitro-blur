@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-nitro-blur": ["./src/index"]
+      "@abeman/react-native-nitro-blur": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
