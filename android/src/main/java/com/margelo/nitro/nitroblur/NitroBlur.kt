@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.facebook.proguard.annotations.DoNotStrip
 import com.facebook.react.uimanager.ThemedReactContext
+import eightbitlab.com.blurview.BlurController
 import eightbitlab.com.blurview.BlurView
 
 private enum class BlurViewConfiguration {
@@ -139,20 +140,13 @@ class HybridNitroBlur(val context: ThemedReactContext) : HybridNitroBlurSpec() {
       return
     }
 
-    blurView.setupWith(target)
+    // API 31+ multiplies scaleFactor into the radius; 2f tuned to match iOS blur strength at the same intensity.
+    val scaleFactor = if (Build.VERSION.SDK_INT >= 31) 2f else BlurController.DEFAULT_SCALE_FACTOR
+    blurView.setupWith(target, scaleFactor, true)
       .setFrameClearDrawable(decorView.background)
       .setBlurRadius(_blurRadius.toFloat())
 
     blurConfiguration = BlurViewConfiguration.DIMEZIS
-  }
-
-  /**
-   * Apply blur settings that may have been set before the BlurView was configured.
-   */
-  private fun applyCurrentBlurSettings() {
-    setBlurRadius(_blurRadius)
-    this.blurMethod = _blurMethod
-    applyTint()
   }
 
   // endregion
